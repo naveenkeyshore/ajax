@@ -1,0 +1,41 @@
+<mvc:View controllerName="Dev.ajax.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <Button id="idbutton" press="onPress" text="Get Data"></Button>
+        <Table id="idtable" items="{covid>/rawData}">
+            <columns>
+            <Column>
+            <Label text="Country_Region"/>
+            </Column>
+            <Column>
+            <Label text="Confirmed"/>
+            </Column>
+            <Column>
+            <Label text="Lat"/>
+            </Column>
+            <Column>
+            <Label text="Long_"/>
+            </Column>
+             <Column>
+            <Label text="Last_Updated"/>
+            </Column>
+            
+            </columns>
+            <items>
+            <ColumnListItem>
+            <cells>
+            <Text text="{covid>Country_Region}"></Text>
+            <Text text="{covid>Confirmed}"></Text>
+            <Text text="{covid>Lat}"></Text>
+            <Text text="{covid>Long_}"></Text>
+            <Text text="{covid>Last_Updated}"></Text>
+            </cells>
+            </ColumnListItem>
+            </items>
+
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
